@@ -21,6 +21,22 @@ The uploaded Project Instructions remain the controlling operating rules. The pr
 
 ---
 
+# ☑️ Categories:
+* 🔶 Category 1 — Project Setup and Business Context
+* 🔶 Category 2 — Corporate Strategy Analysis
+* 🔶 Category 3 — Business Intelligence and KPI Analysis
+* 🔶 Category 4 — Market and Competitive Intelligence
+* 🔶 Category 5 — Financial and Commercial Analysis
+* 🔶 Category 6 — Decision Support, Risk, and Scenario Planning
+* 🔶 Category 7 — Executive Communication and Management Reporting
+* 🔶 Category 8 — Execution Planning and Performance Monitoring
+* 🔶 Category 9 — Guided Practice Cases and Coaching
+* 🔶 Category 10 — Quality Assurance and Decision Readiness
+* 🔶 Category 11 — Five-Step Colleague Demonstration Sequence
+* 🔶 Category 12 — Continued Coaching and Skill Development
+
+---
+
 # 🔴 Category 1 — Project Setup and Business Context
 
 ## 🔰 Prompt 1 — Confirm the project role and operating method
