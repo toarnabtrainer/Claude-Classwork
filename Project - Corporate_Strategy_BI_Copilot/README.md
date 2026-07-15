@@ -6,6 +6,10 @@ The package is deliberately limited to **one project-instructions file and four 
 
 ---
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/837e3f5d-14d7-49b6-8cc4-3d32cd27602d" />
+
+---
+
 ## 1. Project Structure
 
 ```
