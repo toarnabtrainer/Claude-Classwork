@@ -8,6 +8,10 @@
 
 ---
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/837e3f5d-14d7-49b6-8cc4-3d32cd27602d" />
+
+---
+
 ## How to Use This Library
 
 1. Run Prompts 1–5 once after setting up the Claude Project.
