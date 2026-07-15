@@ -2,7 +2,7 @@
 
 A compact Claude Project for corporate strategy, business intelligence, decision support, executive reporting, and guided execution practice.
 
-The package is deliberately limited to **one project-instructions file and four knowledge-base files** so it remains easy to understand, maintain, and demonstrate to colleagues.
+The package is deliberately limited to **one project-instructions file and four knowledge-base files** so it remains easy to understand and maintain.
 
 ---
 
