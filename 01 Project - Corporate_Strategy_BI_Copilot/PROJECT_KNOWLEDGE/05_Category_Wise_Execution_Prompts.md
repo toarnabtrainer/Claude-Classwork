@@ -21,7 +21,7 @@ The uploaded Project Instructions remain the controlling operating rules. The pr
 
 ---
 
-# ☑️ Categories:
+# ☑️ Categories (5 sample prompts for each category):
 * 🔶 Category 1 — Project Setup and Business Context
 * 🔶 Category 2 — Corporate Strategy Analysis
 * 🔶 Category 3 — Business Intelligence and KPI Analysis
