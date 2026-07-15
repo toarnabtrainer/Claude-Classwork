@@ -1,7 +1,18 @@
 # Corporate Performance Command Center
 ## Step-by-Step Build Prompts
 
-Use these prompts in **one Claude Project conversation** and execute them in numerical order. Upload `01_Artifact_Blueprint_and_Quick_Start.md` and `03_Sample_Performance_Data.json` to Project Knowledge before beginning.
+* **Create Project with Title:** Corporate Performance Command Center
+* **Project Description:**
+
+```
+Corporate Performance Command Center is an interactive executive dashboard that helps organizations monitor KPIs, compare actual performance with targets, analyze business trends, track strategic initiatives, review risks, and identify management priorities. Built step by step in Claude using guided prompts and sample data, it is designed for business analysis, decision support, learning, and professional demonstrations.
+```
+
+* **Project Instruction:** Copy and paste the content of 04_PROJECT_INSTRUCTIONS.md file
+
+* **Project Knowledge:** Upload `01_Artifact_Blueprint_and_Quick_Start.md` and `03_Sample_Performance_Data.json` to Project Knowledge before beginning.
+
+Use these prompts in **one Claude Project conversation** and execute them in numerical order. 
 
 Do not paste every prompt at once. After each step, interact with the Artifact and confirm that the new feature works.
 
