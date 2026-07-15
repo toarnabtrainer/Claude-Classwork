@@ -34,11 +34,15 @@ Corporate_Strategy_BI_Copilot/
 ## 3. Setup in Claude
 
 1. Create a new Claude Project.
-2. Name it **Corporate Strategy & Business Intelligence Copilot**.
-3. Open `PROJECT_INSTRUCTIONS.md`, copy its content, and paste it into the project-instructions field.
-4. Upload the four Markdown files inside `PROJECT_KNOWLEDGE` to the project knowledge base.
-5. Start a new project chat.
-6. For real-company work, complete the Company Context Profile in `01_Project_Guide_and_Business_Context.md` or paste the relevant context into the chat.
+2. **Title:** **Corporate Strategy & Business Intelligence Copilot**.
+3. **Description:**
+
+```An AI-powered corporate strategy and business intelligence workspace for analyzing business challenges, KPIs, financial performance, markets, competitors, risks, and strategic options. It produces executive-ready insights, recommendations, decision memos, reports, and action plans while also supporting guided business-case practice and professional skill development.```
+
+4. Open `PROJECT_INSTRUCTIONS.md`, copy its content, and paste it into the project-instructions field.
+5. Upload the four Markdown files inside `PROJECT_KNOWLEDGE` to the project knowledge base.
+6. Start a new project chat.
+7. For real-company work, complete the Company Context Profile in `01_Project_Guide_and_Business_Context.md` or paste the relevant context into the chat.
 
 Do not upload `PROJECT_INSTRUCTIONS.md` as a knowledge file unless you intentionally want a duplicate reference copy. Its primary location is the project-instructions field.
 
