@@ -1,8 +1,8 @@
 # 🔴 Category-Wise Execution Prompt Library
 
 **Project:** Corporate Strategy & Business Intelligence Copilot  
-**Version:** 1.0  
-**Purpose:** Provide a complete, sequenced set of copy-and-paste prompts for project setup, business analysis, execution practice, quality review, and colleague demonstrations.
+**Version:** 1.1  
+**Purpose:** Provide a complete, sequenced set of copy-and-paste prompts for project setup, business analysis, execution practice, quality review, colleague demonstrations, and interactive business Artifact creation.
 
 > Every prompt in this file is complete and contains no text that must be replaced before use. Copy one prompt at a time into a Claude Project chat. Prompts that depend on company-specific evidence instruct Claude what to do when such evidence is not yet available.
 
@@ -16,6 +16,7 @@
 4. Run Prompts 46–50 before using an important output in a meeting or decision.
 5. Run Prompts 51–55 in order for a concise colleague demonstration.
 6. Run Prompts 56–60 for continued coaching, comparison, and skill development.
+7. Run Prompts 61–65 to create interactive, visual business Artifacts in Claude.
 
 The uploaded Project Instructions remain the controlling operating rules. The prompts below activate specific workflows; they do not replace those rules.
 
@@ -34,6 +35,7 @@ The uploaded Project Instructions remain the controlling operating rules. The pr
 * 🔶 Category 10 — Quality Assurance and Decision Readiness
 * 🔶 Category 11 — Five-Step Colleague Demonstration Sequence
 * 🔶 Category 12 — Continued Coaching and Skill Development
+* 🔶 Category 13 — Interactive Business Artifact Creation
 
 ---
 
@@ -448,6 +450,41 @@ Create a four-week practice plan for improving my corporate strategy and busines
 
 ---
 
+
+# 🔴 Category 13 — Interactive Business Artifact Creation
+
+## 🔰 Prompt 61 — Create an executive performance dashboard Artifact
+
+```text
+Create a functional Claude Artifact titled “Executive Performance Command Center” using all reliable company-specific KPI, financial, customer, and operational data currently available in this project and chat. If no company-specific dataset is available, use Case 1 — Retail Growth Without Profit as a clearly labelled fictional demonstration. Build a responsive single-page dashboard with an executive summary, five to eight KPI cards, actual-versus-target comparisons where targets exist, performance trends, profitability drivers, customer or channel indicators, management priorities, and a risk panel. Add only filters supported by the data, and ensure every filter updates all relevant cards, charts, tables, and insights. Use clear business labels, visible units, status text in addition to colour, concise tooltips, accessible contrast, and professional corporate styling. Do not invent figures, unsupported targets, or unsupported causal explanations. Distinguish confirmed observations from analytical inferences in the insight panel. Create the working Artifact directly rather than returning a dashboard description or presentation outline.
+```
+
+## 🔰 Prompt 62 — Create a strategic scenario simulator Artifact
+
+```text
+Create a functional Claude Artifact titled “Strategic Scenario Navigator” for the most material investment or strategic decision supported by the evidence currently available in this project and chat. If no real-company decision is available, use Case 4 — Automation, Outsourcing, or Incremental Improvement. Provide controls for selecting an option and adjusting the key assumptions that materially affect the decision, including demand, implementation cost, annual savings or benefit, operating cost, timing, and discount rate where relevant. Recalculate and display ROI, payback period, three-year NPV, annual net benefit, downside exposure, and the preferred option whenever an input changes. Include base, upside, and downside comparisons, a sensitivity view, assumptions and formula notes, decision triggers, a reset control, and a concise recommendation panel that explains why the preferred option changes. Keep all calculations internally consistent and label fictional or illustrative data clearly. Create the interactive Artifact directly and do not substitute a static memo or spreadsheet-style table.
+```
+
+## 🔰 Prompt 63 — Create a market-entry and competitor explorer Artifact
+
+```text
+Create a functional Claude Artifact titled “Market Entry and Competitive Intelligence Explorer” using all reliable market and competitor evidence currently available in this project and chat. If no company-specific market evidence is available, use Case 3 — Selecting an Export Market and compare Germany, the UAE, and Vietnam. Build an interactive weighted decision matrix with criteria for market demand, growth, profitability, competitive intensity, entry barriers, regulation, capability fit, investment, time to benefit, and risk. Allow users to adjust criterion weights, validate that the total equals one hundred percent, and update market rankings immediately. Include a ranked comparison chart, market profile cards, entry-mode comparison, key competitor positioning, principal risks, validation milestones, exit conditions, and a recommendation panel that explains the decisive factors. Clearly separate source facts, calculations, and illustrative assumptions. Use accessible visuals and create the working Artifact directly rather than producing a written market-entry report.
+```
+
+## 🔰 Prompt 64 — Create a profitability-driver and pricing simulator Artifact
+
+```text
+Create a functional Claude Artifact titled “Profitability Driver and Pricing Lab” using the financial and commercial evidence currently available in this project and chat. If no company-specific data is available, use Case 1 — Retail Growth Without Profit. Show the baseline revenue, gross profit, gross margin, operating expenses, operating profit, discount rate, return rate, marketing spend, channel mix, and inventory write-downs supported by the case or source data. Add interactive controls for price realisation, sales volume, discounting, product or channel mix, return rate, cost of goods sold, marketing spend, and other material operating costs. Recalculate revenue, gross profit, gross margin, operating profit, and profit change as each assumption moves. Include a baseline-versus-scenario view, a profitability-driver bridge, break-even guidance, warning thresholds, a reset control, and a management-action panel. Prevent impossible values, show formulas and units clearly, and do not imply that a simulated outcome is a forecast. Create the working Artifact directly rather than returning only calculations or recommendations.
+```
+
+## 🔰 Prompt 65 — Create a strategy execution and risk control-tower Artifact
+
+```text
+Create a functional Claude Artifact titled “Strategy Execution and Risk Control Tower” using the most recent strategy, recommendation, initiative charter, action plan, scorecard, and risk information available in this project and chat. If no live company initiative is available, use the recommended UAE market-entry plan for Apex Components from Case 3 as a fictional demonstration. Build an interactive view containing strategic objectives, initiatives, accountable functions, milestones, progress, leading indicators, outcome KPIs, dependencies, benefits, risks, decision gates, and immediate actions. Add filters for owner, status, priority, and time horizon; ensure all summary metrics and views update with the filters. Include an initiative portfolio, milestone timeline, KPI status table, risk heat map with text labels, overdue-action alerts, decisions-required panel, and concise executive commentary. Use local interactive state for demonstration, preserve data consistency, avoid decorative controls, and clearly label fictional information. Create the working Artifact directly rather than producing a static project plan or report.
+```
+
+---
+
 # Recommended Everyday Starting Prompts
 
 For most real assignments, begin with one of these:
@@ -461,6 +498,7 @@ For most real assignments, begin with one of these:
 - Prompt 36 for an action plan.
 - Prompt 41 for guided practice.
 - Prompt 49 before an executive meeting.
+- Prompt 61 for an executive performance dashboard Artifact.
 
 ---
 
