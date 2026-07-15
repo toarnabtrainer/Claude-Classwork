@@ -160,6 +160,10 @@ Convert the answer into a one-page executive brief for the CEO.
 Turn the recommendation into a 90-day plan, then challenge it from the CFO's perspective.
 ```
 
+## For Prompt Library refer following files:
+1. PROJECT_KNOWLEDGE/03_Templates_and_Prompt_Library.md
+2. PROJECT_KNOWLEDGE/04_Practice_Cases_and_Demonstration.md
+
 ## 9. Adding Company Knowledge
 
 Useful additions include:
