@@ -2,6 +2,12 @@
 
 **Purpose:** A learner-friendly, step-by-step guide for creating, uploading, enabling, testing, improving, and demonstrating a custom Claude Skill.
 
+---
+
+<img width="1491" height="1055" alt="image" src="https://github.com/user-attachments/assets/b548cdc1-a19f-429f-92d8-689385966b07" />
+
+---
+
 **Example used in this guide:** Executive Brief Writer
 
 **Last verified:** 15 July 2026
