@@ -29,8 +29,9 @@ Corporate_Strategy_BI_Copilot/
 | `PROJECT_INSTRUCTIONS.md` | Defines Claude’s role, analytical workflow, evidence rules, output standards, and Practice Mode. Paste this into the project-instructions field. |
 | `01_Project_Guide_and_Business_Context.md` | Explains how to use the project and provides a company-context profile, source register, and request brief. |
 | `02_Strategy_and_BI_Playbook.md` | Supplies the core strategy, BI, market, financial, decision, risk, and execution methods. |
-| `03_Templates_and_Prompt_Library.md` | Contains management-output templates, 28 execution prompts, six practice prompts, and an evaluation rubric. |
+| `03_Templates_and_Prompt_Library.md` | Contains management-output templates, the compact core prompt library, practice prompts, and an evaluation rubric. |
 | `04_Practice_Cases_and_Demonstration.md` | Contains four fictional cases, facilitator reference answers, and a demonstration script. |
+| `05_Category_Wise_Execution_Prompts.md` | Contains 60 complete, placeholder-free prompts arranged in execution order across twelve categories. |
 
 ## 3. Setup in Claude
 
