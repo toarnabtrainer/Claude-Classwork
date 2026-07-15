@@ -36,7 +36,7 @@ Corporate_Strategy_BI_Copilot/
 ## 3. Setup in Claude
 
 1. Create a new Claude Project.
-2. **Title:** **Corporate Strategy & Business Intelligence Copilot**.
+2. **Title:** **Corporate Strategy & Business Intelligence Copilot**
 3. **Description:**
 
 ```An AI-powered corporate strategy and business intelligence workspace for analyzing business challenges, KPIs, financial performance, markets, competitors, risks, and strategic options. It produces executive-ready insights, recommendations, decision memos, reports, and action plans while also supporting guided business-case practice and professional skill development.```
