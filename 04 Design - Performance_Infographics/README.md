@@ -4,6 +4,12 @@
 
 **Performance Infographics** is a learner-friendly Claude Design project for converting corporate performance data into clear, professional, and decision-focused visual communication.
 
+---
+
+<img width="1536" height="1024" alt="Claude Design - Infographics" src="https://github.com/user-attachments/assets/8d65577d-ecfb-451e-b2b2-56ee1a8ca601" />
+
+---
+
 The project uses one fictional quarterly business case so that the design can be created, tested, and demonstrated without using confidential company information. The final output is produced inside Claude Design by following a sequence of complete prompts.
 
 The project is designed for:
