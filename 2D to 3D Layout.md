@@ -60,6 +60,42 @@ Mounted neatly as a trio on the taupe wall opposite the bed are three identical,
 
 ---
 
+## 🔰 Downloaded 5 Pictures:
+
+<img width="1387" height="285" alt="image" src="https://github.com/user-attachments/assets/7f9d29c8-6fa9-4176-8f9a-1ac3f787aa98" />
+
+## ☑️ Our Prompt:
+
+```text
+Please give one same suitable frame to all the pictures and give me separate five download links for five images separately.
+```
+
+## 🔰 All 5 Pictures with Proper Frames:
+
+<img width="1462" height="245" alt="image" src="https://github.com/user-attachments/assets/cb8e0491-2195-4cb6-b105-2b1606c45243" />
+
+## Marked 3D-Layout Image:
+
+<img width="1024" height="947" alt="x3D Layout-1 (Marked)" src="https://github.com/user-attachments/assets/c05310d5-f49b-431c-a43a-f7243702c875" />
+
+## ☑️ Our Prompt (Attach 3D-Layout Marked file as the fist image and other five framed pictures in order):
+
+```text
+In the image-1
+* Red marked photo should be replaced image-2
+* Blue marked photo should be replaced image-3
+* Green marked photo should be replaced image-4
+* Yellow marked photo should be replaced image-5
+* White marked photo should be replaced image-6
+Regenerate the image-1 accordingly. 
+```
+
+## 🔶 Response:
+
+<img width="1024" height="947" alt="3D Layout-2" src="https://github.com/user-attachments/assets/479d7af9-9b5d-4a36-8209-ff2bbb365776" />
+
+---
+
 ## ☑️ Meshy App Screenshot:
 
 <img width="1916" height="960" alt="Meshy Screenshot" src="https://github.com/user-attachments/assets/8d971aa6-2e99-4a16-9598-fcfc017db528" />
