@@ -24,8 +24,6 @@ The assignment focuses on:
 ├── accounts_assignment_workbook.xlsx # Workbook templates plus synthetic demonstration sheet
 ```
 
-The full facilitator ZIP also contains `FACILITATOR.md`. That file is ignored by Git by default and must not be distributed to participants before the exercise.
-
 ## ☑️ Quick start
 
 1. Read the participant assignment sections in this file.
