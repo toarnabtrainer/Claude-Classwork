@@ -20,8 +20,8 @@ The assignment focuses on:
 
 ```text
 .
-├── README.md                         # ✅ All participant documents and operating guidance
-├── accounts_assignment_workbook.xlsx # ✅ Workbook templates plus synthetic demonstration sheet
+├── README.md                         # All participant documents and operating guidance
+├── accounts_assignment_workbook.xlsx # Workbook templates plus synthetic demonstration sheet
 ```
 
 The full facilitator ZIP also contains `FACILITATOR.md`. That file is ignored by Git by default and must not be distributed to participants before the exercise.
