@@ -22,6 +22,7 @@ The assignment focuses on:
 .
 ├── README.md                         # All participant documents and operating guidance
 ├── accounts_assignment_workbook.xlsx # Workbook templates plus synthetic demonstration sheet
+├── Accounts LH DATA AI.zip           # Source dataset
 ```
 
 ## ☑️ Quick start
