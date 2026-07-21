@@ -1,9 +1,10 @@
 # ✅ Data Analytics with Claude and Prompt Engineering
 ## ☑️ Accounts Assignment and Facilitated Solution Session
 
-**Compact GitHub-ready edition — version 1.1.0**
+**Compact GitHub-ready edition — version 1.2.0**
 
 This repository contains a ready-to-run follow-up assignment for an Accounts department after training on **Data Analytics with Claude and Prompt Engineering**. It consolidates all participant guidance, all 21 actions, all 18 prompts, action-to-prompt mappings, the reusable Excel workbook, synthetic demonstration data, governance guidance and submission templates into a compact two-file package.
+
 The assignment focuses on:
 
 - understanding a WBS–PO–billing dataset;
@@ -13,7 +14,7 @@ The assignment focuses on:
 - improving prompts through testing and validation; and
 - converting analysis into an executive summary.
 
-> **Confidentiality rule:** the original client workbook is intentionally not included. Do not commit real company data, Claude exports, API keys, participant-identifiable information or confidential screenshots.
+> **Confidentiality rule:** the original client workbook is intentionally not included. Do not commit real company data, Claude exports, passwords, access credentials, participant-identifiable information or confidential screenshots.
 
 ## ☑️ Compact repository structure
 
@@ -25,24 +26,26 @@ The assignment focuses on:
 
 ## ☑️ Quick start
 
+Participants need only Microsoft Excel and the client-approved Claude account. No programming, development, command-line or GitHub knowledge is required. The facilitator or repository owner manages the GitHub files.
+
 1. Read the participant assignment sections in this file.
 2. Open `accounts_assignment_workbook.xlsx`.
 3. Keep the original company workbook unchanged.
 4. Paste only a client-approved, sanitized working copy into `Original_Data`, beginning at cell `A2`, while retaining the headers in row 1.
 5. Use the workbook sheets for profiling, reconciliation, exceptions, prompt logging, validation and the executive summary.
-6. Use the `Synthetic_Sample` sheet for ssafe demonstrations, practice and screenshots.
+6. Use the `Synthetic_Sample` sheet for safe demonstrations, practice and screenshots.
 
 ## ☑️ Recommended participant workflow
 
 | Stage | Actions | Main prompts |
 |---|---:|---:|
-| Protect and understand the data | 1–4 | 1, 2, 15 |
+| Protect and understand the data | 1–4 | 2, 1, 15 |
 | Profile data quality | 5 | 2, 3 |
 | Reconcile LOA | 6–7 | 4, 14 |
 | Review PO tax | 8–9 | 5, 13, 14 |
-| Reconcile LOA and PO values | 10 | 6, 13, 18 |
-| Review quantities and units | 11–12 | 7, 13, 18 |
-| Identify exceptions | 13 | 3, 5, 6, 7, 8, 9, 13 |
+| Reconcile LOA and PO values | 10 | 6, 14, 13, 18 |
+| Review quantities and units | 11–12 | 7, 14, 13, 18 |
+| Identify exceptions | 13 | 3, 5, 6, 7, 8, 9, 13, 14 |
 | Classify and prioritize | 14–17 | 3, 10, 11, 12 |
 | Validate Claude | 18–20 | 12, 13, 14, 17, 18 |
 | Communicate results | 21 | 11, 16, 18 |
@@ -66,7 +69,7 @@ The `Reconciliation` sheet contains formulas for up to 1,000 source rows. Raw PO
 
 The `Synthetic_Sample` sheet is fully invented. It intentionally contains a normal line and examples of possible unit scaling, billing with zero PO, PO with no billing, PO pre-tax value above LOA, a tax-rate review, billed value above PO, LOA formula variance, billed quantity above WBS and zero unbilled fields despite incomplete billing. These values do not represent the client workbook.
 
-## ☑️ Data safety and local folders
+## ☑️ Data safety and working-file location
 
 Store client-approved working copies outside this Git repository in a client-approved local folder, SharePoint location or secure shared drive.
 
@@ -74,8 +77,8 @@ Do not place original client data, sanitized client extracts, Claude chat export
 
 The GitHub repository should contain only:
 
-* "README.md"
-* "accounts_assignment_workbook.xlsx"
+- `README.md`
+- `accounts_assignment_workbook.xlsx`
 
 Mandatory controls:
 
@@ -216,9 +219,12 @@ A strong submission:
 
    `Total WBS Qty × WBS Rate`
 
-7. Calculate the LOA variance using:
+7. Calculate:
+   - Signed LOA variance: `Recorded LOA Value – Recalculated LOA Value`
+   - Absolute LOA variance: `ABS(Signed LOA Variance)`
+   - LOA variance percentage: `Signed LOA Variance ÷ Recalculated LOA Value`
 
-   `Recorded LOA Value – Recalculated LOA Value`
+   Return `N/A` for the percentage variance when the recalculated LOA value is zero.
 
 8. Calculate the PO tax amount using:
 
@@ -228,7 +234,7 @@ A strong submission:
 
    `PO Tax Amount ÷ PO Value W/O Tax`
 
-10. Compare LOA value with PO value excluding tax. Do not initially compare LOA value with tax-inclusive PO value.
+10. Compare LOA Value with PO Value W/O Tax only after confirming that both represent comparable pre-tax values. Calculate signed, absolute and percentage variance using LOA Value as the percentage denominator. Return `N/A` where LOA Value is zero. Do not directly compare LOA Value with tax-inclusive PO Value without adjustment and confirmation.
 
 11. Compare WBS quantity, PO quantity and billed quantity only after confirming that the quantities use the same unit and scale.
 
@@ -258,21 +264,21 @@ A strong submission:
    - Unit
    - Exception
    - Supporting calculation
-   - Financial exposure
+   - Financial exposure, or `Not quantifiable from available data`
    - Confidence level
    - Severity
    - Required clarification
    - Recommended action
 
 16. Rank exceptions using:
-   - Financial value
+   - Quantified financial value or business significance
    - Business impact
    - Reliability of the comparison
    - Availability of supporting evidence
 
-17. Select the top ten exceptions for management review.
+17. Select up to ten exceptions for management review. Do not include weak or unsupported items only to reach ten.
 
-18. Independently verify every major Claude calculation using Excel formulas, filters or pivot tables.
+18. Independently verify every major Claude calculation using Excel formulas, filters or PivotTables.
 
 19. Record at least one Claude response that was incomplete, misleading or based on an unsupported assumption.
 
@@ -281,7 +287,7 @@ A strong submission:
 21. Prepare a one-page management summary containing:
    - Key observations
    - Highest-priority exceptions
-   - Financial exposure
+   - Quantified financial exposure and any potential exposure requiring confirmation
    - Important assumptions
    - Required management decisions
    - Recommended next actions
@@ -306,14 +312,14 @@ The assignment contains **21 participant actions** and **18 prompts**. The obser
 | 7 | Calculate LOA variance | 4 | 14 |
 | 8 | Calculate PO tax amount | 5 | 14 |
 | 9 | Calculate effective PO tax rate | 5 | 13, 14 |
-| 10 | Compare LOA Value with PO Value W/O Tax | 6 | 13, 18 |
-| 11 | Compare WBS, PO and billed quantities after checking units | 7 | 13, 18 |
+| 10 | Compare LOA Value with PO Value W/O Tax | 6 | 14, 13, 18 |
+| 11 | Compare WBS, PO and billed quantities after checking units | 7 | 14, 13, 18 |
 | 12 | Prevent addition or comparison of incompatible units | 7 | 13, 18 |
-| 13 | Identify reconciliation and data-quality exceptions | 3, 5, 6, 7, 8, 9 | 13 |
+| 13 | Identify reconciliation and data-quality exceptions | 3, 5, 6, 7, 8, 9 | 13, 14 |
 | 14 | Classify each observation or exception | 3 | 10, 12 |
 | 15 | Prepare the exception register | 10 | 3, 5, 6, 7, 8, 9 |
 | 16 | Rank exceptions by impact, value and confidence | 10 | 11 |
-| 17 | Select the top ten exceptions | 11 | 10 |
+| 17 | Select up to ten exceptions | 11 | 10 |
 | 18 | Independently verify Claude's calculations and conclusions | 13, 14, 18 | 12 |
 | 19 | Record an incomplete or misleading Claude response | 13 | 12 |
 | 20 | Improve the original prompt and document the improvement | 17 | 12, 13 |
@@ -364,17 +370,17 @@ The assignment contains **21 participant actions** and **18 prompts**. The obser
 ### 🔰 Stage 6 — Reconcile LOA and PO values
 
 - Action 10
-- Prompts 6, 13 and 18
+- Prompts 6, 14, 13 and 18
 
 ### 🔰 Stage 7 — Reconcile quantities and units
 
 - Actions 11–12
-- Prompts 7, 13 and 18
+- Prompts 7, 14, 13 and 18
 
 ### 🔰 Stage 8 — Identify exceptions
 
 - Action 13
-- Prompts 3, 5, 6, 7, 8, 9 and 13
+- Prompts 3, 5, 6, 7, 8, 9, 13 and 14
 
 ### 🔰 Stage 9 — Classify and register exceptions
 
@@ -415,10 +421,10 @@ The assignment contains **21 participant actions** and **18 prompts**. The obser
 | 8 | Billing exception analysis | 13, 15 |
 | 9 | Unbilled analysis | 13, 15 |
 | 10 | Exception register and severity | 14, 15, 16 |
-| 11 | Top ten exceptions | 16, 17, 21 |
+| 11 | Up to ten priority exceptions | 16, 17, 21 |
 | 12 | Assumption control | 4, 14, 18, 19, 20, 21 |
 | 13 | Independent challenge and review | 9, 10, 11, 12, 13, 18, 19, 20 |
-| 14 | Excel formula validation | 6, 7, 8, 9, 18 |
+| 14 | Excel formula validation | 6, 7, 8, 9, 10, 11, 13, 18 |
 | 15 | Business clarification | 3, 4 |
 | 16 | Management summary | 21 |
 | 17 | Prompt improvement | 20 |
@@ -445,7 +451,7 @@ Replace bracketed text where necessary. Do not paste confidential data into an u
 
 ## ☑️ Prompt 4 — LOA reconciliation
 
-> Recalculate LOA Value as Total WBS Qty multiplied by WBS Rate. Compare the recalculated amount with the recorded LOA Value. Show WBS Slno, WBS Name, Total WBS Qty, WBS Rate, recorded LOA Value, recalculated LOA Value, absolute variance and percentage variance. Identify possible rounding differences separately from material differences.
+> Recalculate LOA Value as Total WBS Qty multiplied by WBS Rate. For each record, calculate: signed variance as Recorded LOA Value minus Recalculated LOA Value; absolute variance as the absolute value of the signed variance; and percentage variance as Signed Variance divided by Recalculated LOA Value. Where Recalculated LOA Value is zero, return `N/A` for percentage variance rather than dividing by zero. Show WBS Slno, WBS Name, Total WBS Qty, WBS Rate, recorded LOA Value, recalculated LOA Value, signed variance, absolute variance and percentage variance. Separate possible rounding differences from material differences. Do not decide materiality unless an approved threshold has been provided.
 
 ## ☑️ Prompt 5 — PO tax review
 
@@ -453,7 +459,7 @@ Replace bracketed text where necessary. Do not paste confidential data into an u
 
 ## ☑️ Prompt 6 — Value reconciliation
 
-> Compare LOA Value with PO Value W/O Tax because both may represent pre-tax values. Calculate the absolute and percentage variance. Identify records where the PO pre-tax value is materially above or below the LOA value. State that the comparison requires confirmation of the underlying commercial definitions.
+> Compare LOA Value with PO Value W/O Tax only after confirming that both represent comparable pre-tax values. For each record, calculate: signed variance as PO Value W/O Tax minus LOA Value; absolute variance as the absolute value of the signed variance; and percentage variance as Signed Variance divided by LOA Value. Where LOA Value is zero, return `N/A` for percentage variance. Identify records above or below the approved materiality threshold. If no approved threshold has been provided, label the result as a provisional review trigger requiring Accounts confirmation. Do not directly compare LOA Value with tax-inclusive PO Value without adjustment and confirmation.
 
 ## ☑️ Prompt 7 — Quantity analysis
 
@@ -469,11 +475,11 @@ Replace bracketed text where necessary. Do not paste confidential data into an u
 
 ## ☑️ Prompt 10 — Exception register
 
-> Create an exception register with the following columns: WBS Slno, WBS Name, Unit, exception type, supporting calculation, financial exposure, confidence level, severity, required clarification and recommended action. Rank each exception as Critical, High, Medium or Low. Explain the rule used for assigning severity.
+> Create an exception register with the following columns: WBS Slno, WBS Name, Unit, exception type, supporting calculation, financial exposure, confidence level, severity, required clarification and recommended action. Rank each exception as Critical, High, Medium or Low and explain the rule used for assigning severity. Where financial exposure cannot be reliably calculated from the available data, write `Not quantifiable from available data` rather than estimating or inventing an amount.
 
-## ☑️ Prompt 11 — Top ten exceptions
+## ☑️ Prompt 11 — Up to ten priority exceptions
 
-> Identify the ten records that require the most urgent Accounts review. Rank them using financial exposure, business impact, reliability of the comparison and strength of supporting evidence. For each item, explain what was observed, why it matters, what remains uncertain and what action the Accounts team should take.
+> Identify up to ten records that require the most urgent Accounts review. If fewer than ten records have sufficient evidence, present only those supported by the available data. Rank them using quantified financial exposure or business significance, business impact, reliability of the comparison and strength of supporting evidence. For each item, explain what was observed, why it matters, what remains uncertain and what action the Accounts team should take. Do not add weak or unsupported items only to reach ten.
 
 ## ☑️ Prompt 12 — Assumption control
 
@@ -485,7 +491,7 @@ Replace bracketed text where necessary. Do not paste confidential data into an u
 
 ## ☑️ Prompt 14 — Excel validation
 
-> For every calculation used in the analysis, provide an Excel formula that can independently reproduce the result. Include formulas for LOA recalculation, LOA variance, PO tax amount, effective tax rate, PO-to-LOA variance, billing progress and exception flags. Do not provide a result that cannot be independently validated.
+> For every calculation used in the analysis, provide an Excel formula that can independently reproduce the result. Include formulas for LOA recalculation, signed LOA variance, absolute LOA variance, LOA variance percentage, PO tax amount, effective tax rate, signed PO-to-LOA variance, absolute PO-to-LOA variance, PO-to-LOA variance percentage, billing progress and exception flags. Include `IF` or `IFERROR` handling for zero denominators and missing values. Present the formulas in an Excel-friendly table showing the calculation name, required input columns, formula logic, example Excel formula and validation purpose. Do not provide a result that cannot be independently validated.
 
 ## ☑️ Prompt 15 — Business clarification
 
@@ -493,7 +499,7 @@ Replace bracketed text where necessary. Do not paste confidential data into an u
 
 ## ☑️ Prompt 16 — Management summary
 
-> Prepare a one-page executive summary for the Head of Accounts. Include the purpose of the review, major data-quality observations, highest-priority reconciliation exceptions, possible financial exposure, limitations of the dataset, decisions required from management and recommended next actions. Use factual and neutral language.
+> Prepare a one-page executive summary for the Head of Accounts. Include the purpose of the review, major data-quality observations, highest-priority reconciliation exceptions, quantified financial exposure, potential exposure that requires further data or Accounts confirmation, limitations of the dataset, decisions required from management and recommended next actions. Use factual and neutral language. Do not present potential exposure as a confirmed amount.
 
 ## ☑️ Prompt 17 — Prompt improvement
 
@@ -531,7 +537,7 @@ Use this only after participants have first practiced the individual prompts.
 > C. Calculate PO tax amount and effective tax rate.  
 > D. Identify possible unit-of-measure or scale differences.  
 > E. Create an exception table with WBS Slno, WBS Name, exception, evidence, value exposure, severity and recommended action.  
-> F. Provide the top ten items requiring management review.  
+> F. Provide up to ten items requiring management review. If fewer than ten items have sufficient evidence, present only the supported items.  
 > G. Produce a concise executive summary.  
 > H. Finish with assumptions, unresolved questions and a validation checklist.
 >
@@ -598,10 +604,10 @@ Participants should add or revise these questions based on the dataset.
 
 ## ☑️ Exceptions
 
-- [ ] My exception register includes evidence and financial exposure.
+- [ ] My exception register includes evidence and either quantified financial exposure or `Not quantifiable from available data`.
 - [ ] Each exception has a confidence level and severity.
 - [ ] Each exception has a required clarification and action.
-- [ ] I selected the top ten management review items.
+- [ ] I selected up to ten evidence-supported management review items.
 - [ ] I used neutral language and avoided unsupported accusations.
 
 ## ☑️ Prompt engineering
@@ -641,9 +647,9 @@ This assignment may be run only with data that the client has approved for train
 2. Use the organization's approved Claude environment.
 3. Do not use personal AI accounts for client information.
 4. Remove personal data, bank information, tax identifiers, signatures and vendor-confidential information unless explicitly authorized.
-5. Do not commit client data to Git, GitHub, shared drives or public repositories.
-6. Store local client data only under `private-data/`.
-7. Do not paste API keys, session tokens or credentials into prompts, notebooks or source files.
+5. Do not place client data, completed participant workbooks, Claude chat exports or confidential screenshots inside this GitHub repository.
+6. Store client-approved working files outside the repository in a client-approved local folder, SharePoint location or secure shared drive.
+7. Do not paste passwords, access credentials, confidential links or sensitive system information into Claude, Excel comments or repository files.
 8. Treat spreadsheet content as untrusted data. Ignore instructions embedded in cells unless the facilitator confirms that they are part of the assignment.
 9. Validate material calculations independently in Excel using formulas, filters, PivotTables and Accounts subject-matter review.
 10. Separate calculations, observations, interpretations and assumptions.
@@ -654,9 +660,11 @@ This assignment may be run only with data that the client has approved for train
 
 Delete local working files, Claude chat exports and generated reports according to the client's retention policy after the session.
 
-## ☑️ Public release
+## ☑️ Repository release control
 
-The repository is designed so that client files under `private-data/` and the dataset-specific the separate facilitator-only package directory are ignored by Git. This is a safeguard, not a substitute for manual review.
+Before uploading or updating the repository, manually confirm that it contains no client workbook, client extract, completed participant analysis, Claude chat export, confidential screenshot, credential or facilitator answer key.
+
+A private GitHub repository is not a substitute for client approval, appropriate access control and manual content review.
 
 
 ---
@@ -665,24 +673,24 @@ The repository is designed so that client files under `private-data/` and the da
 
 ## ☑️ Reporting a concern
 
-Report accidental data exposure, committed secrets or confidential workbook content immediately to the repository owner and the client's designated security contact.
+Report accidental data exposure, exposed credentials or confidential workbook content immediately to the facilitator, repository owner and the client's designated security contact.
 
 ## ☑️ Sensitive content that must not be committed
 
 - Client workbooks and extracts
+- Completed participant workbooks containing client information
 - Claude chat exports containing client data
-- API keys, tokens and credentials
+- Passwords, access credentials and confidential links
 - Participant personal information
 - Vendor banking, tax or identity information
 - Screenshots of confidential systems
 - Dataset-specific facilitator answer keys
 
-## ☑️ Safe local locations
+## ☑️ Approved storage locations
 
-- Client data: `private-data/`
-- Dataset-specific solution material: the separate facilitator-only package
-
-Both locations are ignored by Git by default.
+- Store client-approved working files in a client-approved local folder, SharePoint location or secure shared drive outside this repository.
+- Store facilitator-only solution material separately with access restricted to authorized facilitators.
+- Keep only `README.md` and `accounts_assignment_workbook.xlsx` in this repository.
 
 ---
 
@@ -727,7 +735,7 @@ Prompt ID,Action(s),Prompt Version,Prompt Text,Claude Output Summary,Issue Ident
 ```csv
 Check ID,Validation Check,Method,Result,Evidence/Formula,Reviewer,Notes
 V01,Original workbook preserved,Manual,,,,
-V02,Rows and columns verified,Excel/validator,,,,
+V02,Rows and columns verified,Excel,,,,
 V03,LOA calculation reproduced,Excel formula,,,,
 V04,Tax amount and rate reproduced,Excel formula,,,,
 V05,Like-for-like value comparison used,Review,,,,
@@ -736,7 +744,7 @@ V07,Quantity scale checked,Review,,,,
 V08,Zero-only fields challenged,Review,,,,
 V09,Unsupported assumptions removed,Challenge prompt,,,,
 V10,Neutral exception language used,Review,,,,
-V11,Top ten exceptions independently checked,Excel/SME,,,,
+V11,Priority exceptions independently checked,Excel/Accounts SME,,,,
 V12,Management summary reflects limitations,Review,,,,
 ```
 
@@ -764,7 +772,7 @@ V12,Management summary reflects limitations,Review,,,,
 
 ## ☑️ Highest-priority review items
 
-| Priority | WBS Slno | Review trigger | Financial exposure | Confidence | Required action |
+| Priority | WBS Slno | Review trigger | Financial exposure or status | Confidence | Required action |
 |---:|---|---|---:|---|---|
 | 1 | | | | | |
 | 2 | | | | | |
@@ -795,32 +803,38 @@ V12,Management summary reflects limitations,Review,,,,
 
 ---
 
-# ✅ Repository Collaboration Templates
+# ✅ Facilitator Support and Issue Reporting
 
-## ☑️ Bug report fields
+Participants should report workbook, prompt or documentation issues directly to the facilitator or repository owner. No technical repository workflow or developer tool is required.
 
----
-name: Bug report
-about: Report a problem in the templates, validator or documentation
-title: "[BUG] "
-labels: bug
-assignees: ""
----
+## ☑️ Issue category
 
-## ☑️ File or command affected
+State whether the issue relates to the workbook, a Claude prompt, the README instructions, file access or another assignment resource.
+
+## ☑️ File or section affected
+
+Identify the workbook sheet, cell range, prompt number or README heading affected.
 
 ## ☑️ Expected result
 
+State what you expected to happen or what the instruction should have produced.
+
 ## ☑️ Actual result
 
-## ☑️ Reproduction steps
+State what happened instead, using neutral and factual language.
+
+## ☑️ Steps followed
+
+List the actions taken immediately before the issue appeared so the facilitator can reproduce it safely.
+
+## ☑️ Evidence to provide
+
+Provide only non-confidential evidence, such as a blank template screenshot or a description of the message displayed. Do not attach client data or confidential screenshots.
 
 ## ☑️ Data-safety confirmation
 
-Confirm that no client data, screenshots or confidential values are included in this issue.
+Confirm that the report contains no client workbook, client value, participant-identifiable information, confidential screenshot, password or access credential.
 
-## ☑️ Pull-request checklist
+## ☑️ Facilitator follow-up
 
-## ☑️ Purpose
-
-Describe the change and the participant or facilitator need it addresses.
+Record the correction provided, the participant action required and whether the workbook or README needs to be updated for future sessions.
