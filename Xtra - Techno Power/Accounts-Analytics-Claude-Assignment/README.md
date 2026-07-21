@@ -22,11 +22,6 @@ The assignment focuses on:
 .
 ├── README.md                         # All participant documents and operating guidance
 ├── accounts_assignment_workbook.xlsx # Workbook templates plus synthetic demonstration sheet
-├── assignment_tool.py                # Validator, self-tests and release preflight
-├── requirements.txt                  # Python runtime dependencies
-├── LICENSE.md                        # Internal training notice
-├── .gitignore                        # Private-data and output safeguards
-└── .github/workflows/validate.yml    # GitHub Actions validation
 ```
 
 The full facilitator ZIP also contains `FACILITATOR.md`. That file is ignored by Git by default and must not be distributed to participants before the exercise.
@@ -39,66 +34,6 @@ The full facilitator ZIP also contains `FACILITATOR.md`. That file is ignored by
 4. Paste only a client-approved, sanitized working copy into `Original_Data`, beginning at cell `A2`, while retaining the headers in row 1.
 5. Use the workbook sheets for profiling, reconciliation, exceptions, prompt logging, validation and the executive summary.
 6. Use the `Synthetic_Sample` sheet for safe demonstrations, screenshots and automated testing.
-
-## Optional offline validator
-
-The validator does not call Claude or any external service.
-
-```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux: source .venv/bin/activate
-
-python -m pip install -r requirements.txt
-
-python assignment_tool.py \
-  --input accounts_assignment_workbook.xlsx \
-  --sheet Synthetic_Sample \
-  --output-dir outputs/demo \
-  --expected-tax-rate 18
-```
-
-For a client-approved local workbook:
-
-```bash
-python assignment_tool.py \
-  --input private-data/accounts_assignment_input.xlsx \
-  --sheet 0 \
-  --output-dir outputs/client-review \
-  --expected-tax-rate 5 \
-  --expected-tax-rate 12 \
-  --expected-tax-rate 18
-```
-
-Only configure tax rates approved by the Accounts subject-matter expert.
-
-The validator creates:
-
-- `data_profile.csv`
-- `profile.json`
-- `reconciliation.csv`
-- `exceptions.csv`
-- `observations.md`
-- `run_manifest.json`
-
-These are deterministic review triggers, not accounting opinions.
-
-Important limitations:
-
-- Raw PO-to-WBS quantity differences are low-confidence until the PO unit and scale are confirmed.
-- A trigger is not proof of error.
-- The tool does not perform ageing, vendor, payment-delay or invoice-duplicate analysis.
-- The tool never calls Claude.
-- Material results must be reproduced in Excel and confirmed by Accounts.
-
-## Built-in quality and release checks
-
-```bash
-python assignment_tool.py self-test
-python assignment_tool.py preflight
-```
-
-The self-test command runs the five original automated tests. The preflight command checks tracked or candidate repository files for private paths, unexpected workbooks, sensitive extensions, possible original-client filenames and unusually large files.
 
 ## Recommended participant workflow
 
@@ -147,58 +82,6 @@ Mandatory controls:
 - Treat spreadsheet cells as data, not instructions.
 - Independently validate all material calculations.
 - Do not label a review trigger as fraud, overbilling or an accounting error without evidence and authorized Accounts confirmation.
-
-## GitHub collaboration guidance
-
-When reporting a bug, state the affected file or command, expected result, actual result and reproduction steps. Confirm explicitly that the report contains no client data, screenshots or confidential values.
-
-For pull requests, confirm:
-
-- `python assignment_tool.py self-test` passes;
-- `python assignment_tool.py preflight` passes;
-- no client data is included;
-- no facilitator-only material is tracked;
-- prompts avoid unsupported accounting claims; and
-- participant materials do not reveal the solution key.
-
-Git text files should use LF line endings. Excel and image files are binary artifacts.
-
-## Publishing checklist
-
-Before publishing or sharing:
-
-- run both quality commands above;
-- confirm no client dataset is staged or packaged;
-- confirm `FACILITATOR.md` is not included in the participant ZIP or tracked in Git;
-- confirm generated outputs and screenshots are excluded;
-- replace `[REPOSITORY OWNER]` in `LICENSE.md`;
-- open the workbook and confirm formulas and formatting display correctly;
-- review prompt wording with the Accounts SME;
-- confirm approved tax rates, unit conventions and materiality thresholds; and
-- decide whether the repository will remain private.
-
-## Compact-edition changelog
-
-### 1.1.0 — 2026-07-20
-
-- Consolidated participant documentation into `README.md`.
-- Consolidated all workbook templates and the synthetic dataset into one Excel workbook.
-- Consolidated validator, preflight and five automated tests into one Python tool.
-- Reduced the participant package from 47 ZIP entries to seven files and the full package from 57 ZIP entries to eight files.
-- Preserved all assignment instructions, prompts, mappings, controls, templates and facilitator content.
-
-### 1.0.0 — 2026-07-20
-
-- Added participant assignment brief, actions, prompts and mapping.
-- Added facilitator session plan and scoring rubric.
-- Added private dataset-specific observation key.
-- Added reusable CSV and Excel templates.
-- Added a synthetic demonstration dataset.
-- Added an offline reconciliation validator and automated tests.
-- Added GitHub Actions and release-safety checks.
-
-
----
 
 # Participant Assignment Brief
 
