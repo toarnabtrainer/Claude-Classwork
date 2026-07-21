@@ -678,17 +678,6 @@ Report accidental data exposure, committed secrets or confidential workbook cont
 
 Both locations are ignored by Git by default.
 
-## ☑️ Release check
-
-Run:
-
-```bash
-python assignment_tool.py preflight
-```
-
-The script checks tracked or candidate repository files for common release risks. A successful result does not replace human review.
-
-
 ---
 
 # ✅ Consolidated Template Appendix
@@ -829,12 +818,3 @@ Confirm that no client data, screenshots or confidential values are included in 
 ## ☑️ Purpose
 
 Describe the change and the participant or facilitator need it addresses.
-
-## ☑️ Validation
-
-- [ ] `python assignment_tool.py self-test` passes
-- [ ] `python assignment_tool.py preflight` passes
-- [ ] No client data is included
-- [ ] No the separate facilitator-only package file is tracked
-- [ ] Prompts do not make unsupported accounting claims
-- [ ] Participant documents do not reveal the solution key
